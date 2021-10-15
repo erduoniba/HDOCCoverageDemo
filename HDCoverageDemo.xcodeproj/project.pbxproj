@@ -7,15 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		887156E326D8689452FFBBB7 /* Pods_HDCoverageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554201254AB320E1230DC3E8 /* Pods_HDCoverageDemo.framework */; };
 		D93F49FF27191911009AC246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F49FE27191911009AC246 /* AppDelegate.swift */; };
 		D93F4A0127191911009AC246 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A0027191911009AC246 /* SceneDelegate.swift */; };
 		D93F4A0327191911009AC246 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A0227191911009AC246 /* ViewController.swift */; };
 		D93F4A0627191911009AC246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93F4A0427191911009AC246 /* Main.storyboard */; };
 		D93F4A0827191914009AC246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93F4A0727191914009AC246 /* Assets.xcassets */; };
 		D93F4A0B27191914009AC246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D93F4A0927191914009AC246 /* LaunchScreen.storyboard */; };
+		D93F4A1E27191C5A009AC246 /* HDOC.m in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A1D27191C5A009AC246 /* HDOC.m */; };
+		D93F4A60271968D1009AC246 /* HDCoverFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D93F4A50271968D1009AC246 /* HDCoverFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D93F4A6F271968FA009AC246 /* HDOCFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D93F4A6D271968FA009AC246 /* HDOCFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D93F4A70271968FA009AC246 /* HDOCFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A6E271968FA009AC246 /* HDOCFramework.m */; };
+		D93F4A9127196D9A009AC246 /* HDCoverFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */; };
+		D93F4A9227196D9A009AC246 /* HDCoverFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D93F4A9327196D9A009AC246 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D93F49F327191911009AC246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D93F4A4D271968D1009AC246;
+			remoteInfo = HDCoverFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D93F4A9527196D9B009AC246 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D93F4A9227196D9A009AC246 /* HDCoverFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		554201254AB320E1230DC3E8 /* Pods_HDCoverageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDCoverageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC148B5C271C959042F71A45 /* Pods-HDCoverageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDCoverageDemo.debug.xcconfig"; path = "Target Support Files/Pods-HDCoverageDemo/Pods-HDCoverageDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D93F49FB27191911009AC246 /* HDCoverageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDCoverageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93F49FE27191911009AC246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93F4A0027191911009AC246 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,10 +57,29 @@
 		D93F4A0727191914009AC246 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D93F4A0A27191914009AC246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D93F4A0C27191914009AC246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93F4A1527191B2F009AC246 /* HDCoverage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCoverage.h; sourceTree = "<group>"; };
+		D93F4A1627191B7A009AC246 /* HDCoverageDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDCoverageDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		D93F4A1C27191C5A009AC246 /* HDOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOC.h; sourceTree = "<group>"; };
+		D93F4A1D27191C5A009AC246 /* HDOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOC.m; sourceTree = "<group>"; };
+		D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HDCoverFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93F4A50271968D1009AC246 /* HDCoverFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCoverFramework.h; sourceTree = "<group>"; };
+		D93F4A51271968D1009AC246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D93F4A6D271968FA009AC246 /* HDOCFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOCFramework.h; sourceTree = "<group>"; };
+		D93F4A6E271968FA009AC246 /* HDOCFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOCFramework.m; sourceTree = "<group>"; };
+		F563A79E25D91FFA8F050C10 /* Pods-HDCoverageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDCoverageDemo.release.xcconfig"; path = "Target Support Files/Pods-HDCoverageDemo/Pods-HDCoverageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D93F49F827191911009AC246 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93F4A9127196D9A009AC246 /* HDCoverFramework.framework in Frameworks */,
+				887156E326D8689452FFBBB7 /* Pods_HDCoverageDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93F4A4B271968D1009AC246 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				D93F49FD27191911009AC246 /* HDCoverageDemo */,
+				D93F4A4F271968D1009AC246 /* HDCoverFramework */,
 				D93F49FC27191911009AC246 /* Products */,
+				D93F4A7827196AD8009AC246 /* Frameworks */,
+				EC2E7B7A0DF50A8F930993BC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D93F49FB27191911009AC246 /* HDCoverageDemo.app */,
+				D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,29 +119,94 @@
 				D93F4A0727191914009AC246 /* Assets.xcassets */,
 				D93F4A0927191914009AC246 /* LaunchScreen.storyboard */,
 				D93F4A0C27191914009AC246 /* Info.plist */,
+				D93F4A1527191B2F009AC246 /* HDCoverage.h */,
+				D93F4A1627191B7A009AC246 /* HDCoverageDemo-Bridging-Header.h */,
+				D93F4A1C27191C5A009AC246 /* HDOC.h */,
+				D93F4A1D27191C5A009AC246 /* HDOC.m */,
 			);
 			path = HDCoverageDemo;
 			sourceTree = "<group>";
 		};
+		D93F4A4F271968D1009AC246 /* HDCoverFramework */ = {
+			isa = PBXGroup;
+			children = (
+				D93F4A50271968D1009AC246 /* HDCoverFramework.h */,
+				D93F4A51271968D1009AC246 /* Info.plist */,
+				D93F4A6D271968FA009AC246 /* HDOCFramework.h */,
+				D93F4A6E271968FA009AC246 /* HDOCFramework.m */,
+			);
+			path = HDCoverFramework;
+			sourceTree = "<group>";
+		};
+		D93F4A7827196AD8009AC246 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				554201254AB320E1230DC3E8 /* Pods_HDCoverageDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC2E7B7A0DF50A8F930993BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC148B5C271C959042F71A45 /* Pods-HDCoverageDemo.debug.xcconfig */,
+				F563A79E25D91FFA8F050C10 /* Pods-HDCoverageDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D93F4A49271968D1009AC246 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93F4A6F271968FA009AC246 /* HDOCFramework.h in Headers */,
+				D93F4A60271968D1009AC246 /* HDCoverFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D93F49FA27191911009AC246 /* HDCoverageDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D93F4A0F27191914009AC246 /* Build configuration list for PBXNativeTarget "HDCoverageDemo" */;
 			buildPhases = (
+				97E2A51B80ED6B0E128A2E0E /* [CP] Check Pods Manifest.lock */,
 				D93F49F727191911009AC246 /* Sources */,
 				D93F49F827191911009AC246 /* Frameworks */,
 				D93F49F927191911009AC246 /* Resources */,
+				D93F4A9527196D9B009AC246 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D93F4A9427196D9A009AC246 /* PBXTargetDependency */,
 			);
 			name = HDCoverageDemo;
 			productName = HDCoverageDemo;
 			productReference = D93F49FB27191911009AC246 /* HDCoverageDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D93F4A4D271968D1009AC246 /* HDCoverFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D93F4A65271968D1009AC246 /* Build configuration list for PBXNativeTarget "HDCoverFramework" */;
+			buildPhases = (
+				D93F4A49271968D1009AC246 /* Headers */,
+				D93F4A4A271968D1009AC246 /* Sources */,
+				D93F4A4B271968D1009AC246 /* Frameworks */,
+				D93F4A4C271968D1009AC246 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HDCoverFramework;
+			productName = HDCoverFramework;
+			productReference = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +218,10 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					D93F49FA27191911009AC246 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+					D93F4A4D271968D1009AC246 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -115,6 +240,7 @@
 			projectRoot = "";
 			targets = (
 				D93F49FA27191911009AC246 /* HDCoverageDemo */,
+				D93F4A4D271968D1009AC246 /* HDCoverFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +256,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D93F4A4C271968D1009AC246 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97E2A51B80ED6B0E128A2E0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HDCoverageDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D93F49F727191911009AC246 /* Sources */ = {
@@ -140,10 +298,27 @@
 				D93F4A0327191911009AC246 /* ViewController.swift in Sources */,
 				D93F49FF27191911009AC246 /* AppDelegate.swift in Sources */,
 				D93F4A0127191911009AC246 /* SceneDelegate.swift in Sources */,
+				D93F4A1E27191C5A009AC246 /* HDOC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D93F4A4A271968D1009AC246 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93F4A70271968FA009AC246 /* HDOCFramework.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D93F4A9427196D9A009AC246 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D93F4A4D271968D1009AC246 /* HDCoverFramework */;
+			targetProxy = D93F4A9327196D9A009AC246 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D93F4A0427191911009AC246 /* Main.storyboard */ = {
@@ -283,10 +458,14 @@
 		};
 		D93F4A1027191914009AC246 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC148B5C271C959042F71A45 /* Pods-HDCoverageDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +473,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HDCoverageDemo/HDCoverageDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,10 +482,14 @@
 		};
 		D93F4A1127191914009AC246 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F563A79E25D91FFA8F050C10 /* Pods-HDCoverageDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,8 +497,65 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HDCoverageDemo/HDCoverageDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D93F4A66271968D1009AC246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				INFOPLIST_FILE = HDCoverFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D93F4A67271968D1009AC246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				INFOPLIST_FILE = HDCoverFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -334,6 +576,15 @@
 			buildConfigurations = (
 				D93F4A1027191914009AC246 /* Debug */,
 				D93F4A1127191914009AC246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D93F4A65271968D1009AC246 /* Build configuration list for PBXNativeTarget "HDCoverFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D93F4A66271968D1009AC246 /* Debug */,
+				D93F4A67271968D1009AC246 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

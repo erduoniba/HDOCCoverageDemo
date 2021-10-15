@@ -247,17 +247,17 @@ Xcode设置Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrum
 
 主要是收集 `gcno` , 用于将编译阶段的代码信息收集，以便和运行时进行对比计算代码覆盖率。
 
-![image-20211015110555559](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015110555559.png)
+![image-20211015110555559](./单元测试及代码覆盖率.assets/image-20211015110555559.png)
 
 项目运行后，找到 `gcno` 文件：
 
-![image-20211015113007738](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015113007738.png)
+![image-20211015113007738](./单元测试及代码覆盖率.assets/image-20211015113007738.png)
 
 `gcno` 文件路径在：` /Users/denglibing/Library/Developer/Xcode/DerivedData/HDCoverageDemo-ebhseosomyludgdhoyoupffqussp/Build/Intermediates.noindex/HDCoverageDemo.build/Debug-iphonesimulator/HDCoverageDemo.build/Objects-normal/x86_64 `
 
 这里会收集本次编译运行的所有 `gcno` 文件
 
-![image-20211015113327669](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015113327669.png)
+![image-20211015113327669](./单元测试及代码覆盖率.assets/image-20211015113327669.png)
 
 
 
@@ -306,7 +306,7 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 
 打开 `coverageFile` 目录如下：
 
-![image-20211015113626349](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015113626349.png)
+![image-20211015113626349](./单元测试及代码覆盖率.assets/image-20211015113626349.png)
 
 说明的确只能对 `OC` 代码进行收集计算覆盖率
 
@@ -367,11 +367,11 @@ HDCoverageDemo  HDOC.gcda       HDOC.gcno       hdcoverage.info html
 
 整体情况：
 
-![image-20211015150715507](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015150715507.png)
+![image-20211015150715507](./单元测试及代码覆盖率.assets/image-20211015150715507.png)
 
 某个类的执行情况：
 
-![image-20211015150934504](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015150934504.png)
+![image-20211015150934504](./单元测试及代码覆盖率.assets/image-20211015150934504.png)
 
 **将上面的脚本汇总，一步到位：**
 
@@ -457,7 +457,7 @@ Finished .info-file creation
 
 4.4、依赖的framework或者ibiu组件测试代码覆盖率，Xcode设置framework的Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrument Program Flow` 为 `YES`
 
-![image-20211015204749135](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015204749135.png)
+![image-20211015204749135](./单元测试及代码覆盖率.assets/image-20211015204749135.png)
 
 对 framework 进行编译后，也和工程找 `gcno`  一样找到 framework 的文件，`gcda` 和项目工程是在一起。这里麻烦的是，需要把framework 的源码也找到，并且和 `gcno` 和 `gcda` 放一起:
 
@@ -518,7 +518,7 @@ HDCoverageDemo     HDOC.gcno          HDOCFramework.gcno html
 
 打开 `html` 中的  `index.html` , 即可查看工程和framework的代码覆盖率：
 
- ![image-20211015205547195](/Users/denglibing/HDProject/WorkFiles/MD/单元测试及代码覆盖率/单元测试及代码覆盖率.assets/image-20211015205547195.png)
+ ![image-20211015205547195](./单元测试及代码覆盖率.assets/image-20211015205547195.png)
 
 
 
@@ -529,3 +529,4 @@ HDCoverageDemo     HDOC.gcno          HDOCFramework.gcno html
 
 
 > 使用 XcodeCoverage 进行计算
+

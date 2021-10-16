@@ -88,7 +88,7 @@ iii、代码细节得到更加充分地测试
 
 基于iBiu创建单元测试Target：
 
-![image-20210427152325662](单元测试及代码覆盖率.assets/image-20210427152325662.png)
+![image-20210427152325662](./单元测试及代码覆盖率.assets/image-20210427152325662.png)
 
 创建之后
 
@@ -154,7 +154,7 @@ XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, for
 
 **5.4、输出结果：**
 
-![image-20210427162123248](单元测试及代码覆盖率.assets/image-20210427162123248.png)
+![image-20210427162123248](./单元测试及代码覆盖率.assets/image-20210427162123248.png)
 
 **5.5、后续计划：**
 
@@ -180,11 +180,11 @@ XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, for
 
 在 `跳转中心组件`  单独测试，耗时如下：
 
-![image-20210428171734957](单元测试及代码覆盖率.assets/image-20210428171734957.png)
+![image-20210428171734957](./单元测试及代码覆盖率.assets/image-20210428171734957.png)
 
 在 `京喜App`  主工程集成测试，耗时如下：
 
-![image-20210429112610891](单元测试及代码覆盖率.assets/image-20210429112610891.png)
+![image-20210429112610891](./单元测试及代码覆盖率.assets/image-20210429112610891.png)
 
 
 
@@ -194,7 +194,7 @@ XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, for
 
 **注意点1**：基于 `iBiu` 上开发测试性能测试，如果需要依赖其他组件环境，无法通过target依赖对应组件实现。需要手动设置依赖组件的Framework的path来实现：
 
-![image-20210428161236706](单元测试及代码覆盖率.assets/image-20210428161236706.png)
+![image-20210428161236706](./单元测试及代码覆盖率.assets/image-20210428161236706.png)
 
 **注意点2**：基于 `iBiu` 开发，依赖外部的第三方mock组件，需要使用 `Podfile.custom` 来扩展能力
 
@@ -247,17 +247,17 @@ Xcode设置Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrum
 
 主要是收集 `gcno` , 用于将编译阶段的代码信息收集，以便和运行时进行对比计算代码覆盖率。
 
-![image-20211015110555559](单元测试及代码覆盖率.assets/image-20211015110555559.png)
+![image-20211015110555559](./单元测试及代码覆盖率.assets/image-20211015110555559.png)
 
 项目运行后，找到 `gcno` 文件：
 
-![image-20211015113007738](单元测试及代码覆盖率.assets/image-20211015113007738.png)
+![image-20211015113007738](./单元测试及代码覆盖率.assets/image-20211015113007738.png)
 
 `gcno` 文件路径在：` /Users/denglibing/Library/Developer/Xcode/DerivedData/HDCoverageDemo-ebhseosomyludgdhoyoupffqussp/Build/Intermediates.noindex/HDCoverageDemo.build/Debug-iphonesimulator/HDCoverageDemo.build/Objects-normal/x86_64 `
 
 这里会收集本次编译运行的所有 `gcno` 文件
 
-![image-20211015113327669](单元测试及代码覆盖率.assets/image-20211015113327669.png)
+![image-20211015113327669](./单元测试及代码覆盖率.assets/image-20211015113327669.png)
 
 
 
@@ -306,13 +306,13 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 
 打开 `coverageFile` 目录如下：
 
-![image-20211015113626349](单元测试及代码覆盖率.assets/image-20211015113626349.png)
+![image-20211015113626349](./单元测试及代码覆盖率.assets/image-20211015113626349.png)
 
 说明的确只能对 `OC` 代码进行收集计算覆盖率
 
 #### 3、计算覆盖率和数据可视化
 
-将前面两步收集的到的 `gcno`  和 `gcda` 复制到同一个目录，将项目源码也负责到该目录中（如果没有这个操作，执行 lcvo 失败，后面的注意点会提到 **具体见4.3**）
+将前面两步收集的到的 `gcno`  和 `gcda` 复制到同一个目录，将项目源码也负责到该目录中（如果没有这个操作，执行 lcvo 失败，后面的注意点会提到 **具体见5.3**）
 
 ```sh
 ➜  HDCoverageDemo ls
@@ -367,11 +367,11 @@ HDCoverageDemo  HDOC.gcda       HDOC.gcno       hdcoverage.info html
 
 整体情况：
 
-![image-20211015150715507](单元测试及代码覆盖率.assets/image-20211015150715507.png)
+![image-20211015150715507](./单元测试及代码覆盖率.assets/image-20211015150715507.png)
 
 某个类的执行情况：
 
-![image-20211015150934504](单元测试及代码覆盖率.assets/image-20211015150934504.png)
+![image-20211015150934504](./单元测试及代码覆盖率.assets/image-20211015150934504.png)
 
 **将上面的脚本汇总，一步到位：**
 
@@ -425,7 +425,7 @@ fi
 
 依赖的framework统计代码覆盖率，Xcode设置framework的Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrument Program Flow` 为 `YES`
 
-![image-20211015204749135](单元测试及代码覆盖率.assets/image-20211015204749135.png)
+![image-20211015204749135](./单元测试及代码覆盖率.assets/image-20211015204749135.png)
 
 对 framework 进行编译后，也和工程找 `gcno`  一样找到 framework 的文件，`gcda` 和项目工程是在一起。这里麻烦的是，需要把framework 的源码也找到，并且和 `gcno` 和 `gcda` 放一起:
 
@@ -486,7 +486,7 @@ HDCoverageDemo     HDOC.gcno          HDOCFramework.gcno result
 
 打开 `result/html` 中的  `index.html` , 即可查看工程和framework的代码覆盖率：
 
- ![image-20211015205547195](单元测试及代码覆盖率.assets/image-20211015205547195.png)
+ ![image-20211015205547195](./单元测试及代码覆盖率.assets/image-20211015205547195.png)
 
 
 
@@ -496,11 +496,11 @@ HDCoverageDemo     HDOC.gcno          HDOCFramework.gcno result
 
 和 **4** 其实很类似，在使用 `pod install` 安装之后，修改你需要覆盖的组件的配置，比如我们需要对 `PINCache` 这个 `Pod` 做代码覆盖率计算，安装后设置 Build Settings 的  `Generate Legacy Test Coverage Files` 和 `Instrument Program Flow` 为 `YES`
 
-![image-20211016101436308](单元测试及代码覆盖率.assets/image-20211016101436308.png)
+![image-20211016101436308](./单元测试及代码覆盖率.assets/image-20211016101436308.png)
 
 `gnco` 文件需要注意下，和工程还不在同一个目录下：
 
-![image-20211016102008978](单元测试及代码覆盖率.assets/image-20211016102008978.png)
+![image-20211016102008978](./单元测试及代码覆盖率.assets/image-20211016102008978.png)
 
 项目运行后，`gcda` 和项目工程是在一起。这里麻烦的是，需要把 `Pod` 的源码也找到并且和 `gcno` 和 `gcda` 放一起:
 
@@ -572,7 +572,7 @@ Overall coverage rate:
 
 打开 `result/html` 中的  `index.html` , 即可查看工程和 `Pod` 的代码覆盖率：
 
-![image-20211016103001827](单元测试及代码覆盖率.assets/image-20211016103001827.png)
+![image-20211016103001827](./单元测试及代码覆盖率.assets/image-20211016103001827.png)
 
 
 

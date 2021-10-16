@@ -312,7 +312,7 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 
 #### 3、计算覆盖率和数据可视化
 
-将前面两步收集的到的 `gcno`  和 `gcda` 复制到同一个目录，将项目源码也负责到该目录中（如果没有这个操作，执行 lcvo 失败，后面的注意点会提到 **具体见5.3**）
+将前面两步收集的到的 `gcno`  和 `gcda` 复制到同一个目录，将项目源码也负责到该目录中（如果没有这个操作，执行 lcvo 失败，后面的注意点会提到 **具体见4.3**）
 
 ```sh
 ➜  HDCoverageDemo ls
@@ -573,6 +573,23 @@ Overall coverage rate:
 打开 `result/html` 中的  `index.html` , 即可查看工程和 `Pod` 的代码覆盖率：
 
 ![image-20211016103001827](./单元测试及代码覆盖率.assets/image-20211016103001827.png)
+
+当然，这里肯定不能对每个组件进行手动修改，可以在 `Podfile` 添加 安装后的hook命令：
+
+```ruby
+# 实现post_install Hooks
+post_install do |installer|
+  # 1. 遍历项目中所有target
+  installer.pods_project.targets.each do |target|
+    # 2. 遍历build_configurations
+    target.build_configurations.each do |config|
+      # 3. 修改build_settings中的GCC_GENERATE_TEST_COVERAGE_FILES和GCC_INSTRUMENT_PROGRAM_FLOW_ARCS
+      config.build_settings['GCC_GENERATE_TEST_COVERAGE_FILES'] = 'YES'
+      config.build_settings['GCC_INSTRUMENT_PROGRAM_FLOW_ARCS'] = 'YES'
+    end
+  end
+end
+```
 
 
 

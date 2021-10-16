@@ -247,17 +247,17 @@ Xcode设置Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrum
 
 主要是收集 `gcno` , 用于将编译阶段的代码信息收集，以便和运行时进行对比计算代码覆盖率。
 
-![image-20211015110555559](./单元测试及代码覆盖率.assets/image-20211015110555559.png)
+![image-20211015110555559](单元测试及代码覆盖率.assets/image-20211015110555559.png)
 
 项目运行后，找到 `gcno` 文件：
 
-![image-20211015113007738](./单元测试及代码覆盖率.assets/image-20211015113007738.png)
+![image-20211015113007738](单元测试及代码覆盖率.assets/image-20211015113007738.png)
 
 `gcno` 文件路径在：` /Users/denglibing/Library/Developer/Xcode/DerivedData/HDCoverageDemo-ebhseosomyludgdhoyoupffqussp/Build/Intermediates.noindex/HDCoverageDemo.build/Debug-iphonesimulator/HDCoverageDemo.build/Objects-normal/x86_64 `
 
 这里会收集本次编译运行的所有 `gcno` 文件
 
-![image-20211015113327669](./单元测试及代码覆盖率.assets/image-20211015113327669.png)
+![image-20211015113327669](单元测试及代码覆盖率.assets/image-20211015113327669.png)
 
 
 
@@ -306,7 +306,7 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 
 打开 `coverageFile` 目录如下：
 
-![image-20211015113626349](./单元测试及代码覆盖率.assets/image-20211015113626349.png)
+![image-20211015113626349](单元测试及代码覆盖率.assets/image-20211015113626349.png)
 
 说明的确只能对 `OC` 代码进行收集计算覆盖率
 
@@ -367,11 +367,11 @@ HDCoverageDemo  HDOC.gcda       HDOC.gcno       hdcoverage.info html
 
 整体情况：
 
-![image-20211015150715507](./单元测试及代码覆盖率.assets/image-20211015150715507.png)
+![image-20211015150715507](单元测试及代码覆盖率.assets/image-20211015150715507.png)
 
 某个类的执行情况：
 
-![image-20211015150934504](./单元测试及代码覆盖率.assets/image-20211015150934504.png)
+![image-20211015150934504](单元测试及代码覆盖率.assets/image-20211015150934504.png)
 
 **将上面的脚本汇总，一步到位：**
 
@@ -402,10 +402,18 @@ Overall coverage rate:
 
 ```sh
 # lcov.sh文件
-lcov -c -d . -o hdcoverage.info
+result=./result
+if [[ -d $result ]]; then
+	echo "$result 存在"
+else
+	mkdir $result
+	echo "$result 不存在，已经创建"
+fi
+
+lcov -c -d . -o result/hdcoverage.info
 
 if [ $? -eq 0 ]; then
-	genhtml -o html hdcoverage.info
+	genhtml -o result/html result/hdcoverage.info
 else
 	echo "lcov faild"
 fi
@@ -413,51 +421,11 @@ fi
 
 
 
-#### 4、常见问题：
+#### 4、framework代码覆盖率
 
-4.1、找不到 `lcov` 命令，请查看官方文档，或者终端执行 `brew install lcov`
+依赖的framework统计代码覆盖率，Xcode设置framework的Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrument Program Flow` 为 `YES`
 
-
-
-4.2、执行  `lcov -c -d ./ -o hdcoverage.info` 报错：**"File checksums do not match: 4271174018 != 3267742850."**
-
-```sh
-➜  HDCoverageDemo lcov -c -d ./ -o hdcoverage.info
-Capturing coverage data from ./
-Found LLVM gcov version 12.0.0, which emulates gcov version 4.2.0
-Scanning ./ for .gcda files ...
-Found 1 data files in ./
-Processing HDOC.gcda
-File checksums do not match: 4271174018 != 3267742850.
-Invalid .gcda File!
-geninfo: WARNING: gcov did not create any files for /Users/denglibing/HDProject/desktop/dmfgl/HDCoverageDemo/HDOC.gcda!
-Finished .info-file creation
-```
-
-表示 `gcda` 和  `gcov`  文件没有成对生成，导致对不上。删除重新跑一次
-
-
-
-4.3、执行  `lcov -c -d ./ -o hdcoverage.info` 报错：**"HDCoverageDemo/HDOC.m: No such file or directory"**
-
-```sh
-➜  HDCoverageDemo lcov -c -d . -o hdcoverage.info
-Capturing coverage data from .
-Found LLVM gcov version 12.0.0, which emulates gcov version 4.2.0
-Scanning . for .gcda files ...
-Found 1 data files in .
-Processing HDOC.gcda
-HDCoverageDemo/HDOC.m: No such file or directory
-Finished .info-file creation
-```
-
-这个网上也有人遇到过，没有找到解决方案，但是根据错误提示，只要将项目的源码也复制到  `gcda`  同一个目录即可。虽然已经解决，但是不确认是否是最优解，并且这样会带来一定的工作量，而且在没有源码或者使用framework的情况下，不确定是否能计算代码覆盖率。
-
- 
-
-4.4、依赖的framework或者ibiu组件测试代码覆盖率，Xcode设置framework的Build Settings的  `Generate Legacy Test Coverage Files` 和 `Instrument Program Flow` 为 `YES`
-
-![image-20211015204749135](./单元测试及代码覆盖率.assets/image-20211015204749135.png)
+![image-20211015204749135](单元测试及代码覆盖率.assets/image-20211015204749135.png)
 
 对 framework 进行编译后，也和工程找 `gcno`  一样找到 framework 的文件，`gcda` 和项目工程是在一起。这里麻烦的是，需要把framework 的源码也找到，并且和 `gcno` 和 `gcda` 放一起:
 
@@ -510,19 +478,149 @@ Overall coverage rate:
   functions..: 100.0% (2 of 2 functions)
   
   
-在当前路径生成 html 文件夹
+在当前路径生成 result 文件夹 (包含 hdcoverage.info 和 html 文件夹)
 ➜  HDCoverageDemo ls
-HDCoverFramework   HDOC.gcda          HDOCFramework.gcda hdcoverage.info    lcov.sh
-HDCoverageDemo     HDOC.gcno          HDOCFramework.gcno html
+HDCoverFramework   HDOC.gcda          HDOCFramework.gcda     lcov.sh
+HDCoverageDemo     HDOC.gcno          HDOCFramework.gcno result
 ```
 
-打开 `html` 中的  `index.html` , 即可查看工程和framework的代码覆盖率：
+打开 `result/html` 中的  `index.html` , 即可查看工程和framework的代码覆盖率：
 
- ![image-20211015205547195](./单元测试及代码覆盖率.assets/image-20211015205547195.png)
+ ![image-20211015205547195](单元测试及代码覆盖率.assets/image-20211015205547195.png)
 
 
 
-4.5、基于 `cocoapods`  组件开发实现代码覆盖率问题。
+
+
+#### 5、Pods代码覆盖率
+
+和 **4** 其实很类似，在使用 `pod install` 安装之后，修改你需要覆盖的组件的配置，比如我们需要对 `PINCache` 这个 `Pod` 做代码覆盖率计算，安装后设置 Build Settings 的  `Generate Legacy Test Coverage Files` 和 `Instrument Program Flow` 为 `YES`
+
+![image-20211016101436308](单元测试及代码覆盖率.assets/image-20211016101436308.png)
+
+`gnco` 文件需要注意下，和工程还不在同一个目录下：
+
+![image-20211016102008978](单元测试及代码覆盖率.assets/image-20211016102008978.png)
+
+项目运行后，`gcda` 和项目工程是在一起。这里麻烦的是，需要把 `Pod` 的源码也找到并且和 `gcno` 和 `gcda` 放一起:
+
+```sh
+# 确认 Pod 的代码和 gcno 和 gcda 放在同一个目录下
+➜  HDCoverageDemo tree -L 3
+.
+├── HDCoverFramework
+│   ├── HDCoverFramework.h
+│   ├── HDOCFramework.h
+│   ├── HDOCFramework.m
+│   └── Info.plist
+├── HDCoverageDemo
+│   ├── HDCoverage.h
+│   ├── HDCoverageDemo-Bridging-Header.h
+│   ├── HDOC.h
+│   ├── HDOC.m
+│   ├── Info.plist
+│   ├── SceneDelegate.swift
+│   └── ViewController.swift
+├── HDOC.gcda
+├── HDOC.gcno
+├── HDOCFramework.gcda
+├── HDOCFramework.gcno
+├── PINCache
+│   ├── LICENSE.txt
+│   ├── PINCache
+│   │   ├── Nullability.h
+│   │   ├── PINCache.h
+│   │   ├── PINCache.m
+│   │   ├── PINCacheObjectSubscripting.h
+│   │   ├── PINDiskCache.h
+│   │   ├── PINDiskCache.m
+│   │   ├── PINMemoryCache.h
+│   │   └── PINMemoryCache.m
+│   └── README.md
+├── PINCache.gcda
+├── PINCache.gcno
+└── lcov.sh
+
+8 directories, 32 files
+
+# 执行计算和可视化命令
+➜  HDCoverageDemo sh lcov.sh
+./result 不存在，已经创建
+Capturing coverage data from .
+Found LLVM gcov version 12.0.0, which emulates gcov version 4.2.0
+Scanning . for .gcda files ...
+Found 3 data files in .
+Processing HDOC.gcda
+Processing HDOCFramework.gcda
+Processing PINCache.gcda
+Finished .info-file creation
+Reading data file result/hdcoverage.info
+Found 5 entries.
+Found common filename prefix "/Users/denglibing/HDProject/desktop/dmfgl/HDCoverageDemo"
+Writing .css and .png files.
+Generating output.
+Processing file /Applications/Xcode12.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/dispatch/once.h
+Processing file HDCoverFramework/HDOCFramework.m
+Processing file HDCoverageDemo/HDOC.m
+Processing file PINCache/PINCache/PINCache.m
+Processing file PINCache/PINCache/PINCache.h
+Writing directory view page.
+Overall coverage rate:
+  lines......: 21.2% (60 of 283 lines)
+  functions..: 17.6% (9 of 51 functions)
+```
+
+打开 `result/html` 中的  `index.html` , 即可查看工程和 `Pod` 的代码覆盖率：
+
+![image-20211016103001827](单元测试及代码覆盖率.assets/image-20211016103001827.png)
+
+
+
+
+
+#### 5、常见问题：
+
+5.1、找不到 `lcov` 命令，请查看官方文档，或者终端执行 `brew install lcov`
+
+
+
+5.2、执行  `lcov -c -d ./ -o hdcoverage.info` 报错：**"File checksums do not match: 4271174018 != 3267742850."**
+
+```sh
+➜  HDCoverageDemo lcov -c -d ./ -o hdcoverage.info
+Capturing coverage data from ./
+Found LLVM gcov version 12.0.0, which emulates gcov version 4.2.0
+Scanning ./ for .gcda files ...
+Found 1 data files in ./
+Processing HDOC.gcda
+File checksums do not match: 4271174018 != 3267742850.
+Invalid .gcda File!
+geninfo: WARNING: gcov did not create any files for /Users/denglibing/HDProject/desktop/dmfgl/HDCoverageDemo/HDOC.gcda!
+Finished .info-file creation
+```
+
+表示 `gcda` 和  `gcov`  文件没有成对生成，导致对不上。删除重新跑一次
+
+
+
+5.3、执行  `lcov -c -d ./ -o hdcoverage.info` 报错：**"HDCoverageDemo/HDOC.m: No such file or directory"**
+
+```sh
+➜  HDCoverageDemo lcov -c -d . -o hdcoverage.info
+Capturing coverage data from .
+Found LLVM gcov version 12.0.0, which emulates gcov version 4.2.0
+Scanning . for .gcda files ...
+Found 1 data files in .
+Processing HDOC.gcda
+HDCoverageDemo/HDOC.m: No such file or directory
+Finished .info-file creation
+```
+
+这个网上也有人遇到过，没有找到解决方案，但是根据错误提示，只要将项目的源码也复制到  `gcda`  同一个目录即可。虽然已经解决，但是不确认是否是最优解，并且这样会带来一定的工作量，而且在没有源码或者使用framework的情况下，不确定是否能计算代码覆盖率。
+
+ 
+
+
 
 
 

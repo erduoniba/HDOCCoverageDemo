@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         HDOC.changeViewColor(view)
         
         HDOCFramework.changeViewColor(view)
+        
+        debugPrint("PINCache.shared().diskByteCount: \(PINCache.shared().diskByteCount)")
     }
     
     private func zero() {

@@ -5,3 +5,4 @@
 #import "HDCoverage.h"
 #import "HDOC.h"
 #import <HDCoverFramework/HDOCFramework.h>
+#import <PINCache/PINCache.h>

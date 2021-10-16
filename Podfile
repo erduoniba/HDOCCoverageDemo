@@ -3,6 +3,6 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'HDCoverageDemo' do
-    # pod 'HDBaseProject', :git => 'https://github.com/erduoniba/HDBaseProject.git'
+     pod 'HDBaseProject', :git => 'https://github.com/erduoniba/HDBaseProject.git'
     # pod 'XcodeCoverage'
 end

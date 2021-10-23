@@ -7,6 +7,8 @@
 
 import UIKit
 
+import InstrProfiling
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -48,11 +50,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
      
         // __gcov_flush() 是同步方法，可能会卡住主线程，使用异步线程比较合适
-        DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2) { [self] in
             __gcov_flush();
+            
+            saveAndUpload();
         }
     }
 
 
+    private func saveAndUpload() {
+        print("File Name: \(String(cString: __llvm_profile_get_filename()) )")
+        let name = "HDCoverageDemo.profraw"
+        let fileManager = FileManager.default
+        do {
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
+            let filePath: NSString = documentDirectory.appendingPathComponent(name).path as NSString
+            __llvm_profile_set_filename(filePath.utf8String)
+            print("File Name: \(String(cString: __llvm_profile_get_filename()))")
+            __llvm_profile_write_file()
+        } catch {
+            print(error)
+        }
+    }
 }
 

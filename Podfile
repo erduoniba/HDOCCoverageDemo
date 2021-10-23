@@ -4,6 +4,7 @@ inhibit_all_warnings!
 
 target 'HDCoverageDemo' do
      pod 'HDBaseProject', :git => 'https://github.com/erduoniba/HDBaseProject.git'
+     pod 'HDCoverage'
     # pod 'XcodeCoverage'
 end
 

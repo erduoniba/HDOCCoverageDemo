@@ -1,0 +1,11 @@
+//
+//  module.modulemap
+//  HDCoverageDemo
+//
+//  Created by denglibing on 2021/10/20.
+//
+
+module InstrProfiling {
+    header "InstrProfiling.h"
+    export *
+}

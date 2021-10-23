@@ -9,19 +9,15 @@
 
 @implementation HDOCFramework
 
-+ (void)changeViewColor:(UIView *)view {
-    NSInteger random = arc4random() % 3;
-    if (random == 0) {
-        NSLog(@"HDOCFramework random:%d", 0);
-        view.backgroundColor = [UIColor orangeColor];
++ (void)frameworkOCAction:(NSInteger)tag {
+    if (tag == 1) {
+        NSLog(@"frameworkOCAction: %d", 1);
     }
-    else if (random == 1) {
-        NSLog(@"HDOCFramework random:%d", 1);
-        view.backgroundColor = [UIColor redColor];
+    else if (tag == 2) {
+        NSLog(@"frameworkOCAction: %d", 2);
     }
-    else if (random == 2) {
-        NSLog(@"HDOCFramework random:%d", 2);
-        view.backgroundColor = [UIColor systemGray5Color];
+    else if (tag == 3) {
+        NSLog(@"frameworkOCAction: %d", 3);
     }
 }
 

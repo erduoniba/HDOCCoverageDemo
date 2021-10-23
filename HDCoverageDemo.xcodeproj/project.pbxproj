@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		887156E326D8689452FFBBB7 /* Pods_HDCoverageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554201254AB320E1230DC3E8 /* Pods_HDCoverageDemo.framework */; };
+		D91C8135272100CC0085A3E3 /* HDSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C8134272100CC0085A3E3 /* HDSwift.swift */; };
 		D93F49FF27191911009AC246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F49FE27191911009AC246 /* AppDelegate.swift */; };
 		D93F4A0127191911009AC246 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A0027191911009AC246 /* SceneDelegate.swift */; };
 		D93F4A0327191911009AC246 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A0227191911009AC246 /* ViewController.swift */; };
@@ -20,6 +20,8 @@
 		D93F4A70271968FA009AC246 /* HDOCFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = D93F4A6E271968FA009AC246 /* HDOCFramework.m */; };
 		D93F4A9127196D9A009AC246 /* HDCoverFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */; };
 		D93F4A9227196D9A009AC246 /* HDCoverFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9F22E3B272018260020E653 /* HDSwiftFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F22E3A272018260020E653 /* HDSwiftFramework.swift */; };
+		E3B774133B5038BDA82C91A7 /* Pods_HDCoverageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BFDB13673B2B43F154E20 /* Pods_HDCoverageDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		554201254AB320E1230DC3E8 /* Pods_HDCoverageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDCoverageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC148B5C271C959042F71A45 /* Pods-HDCoverageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDCoverageDemo.debug.xcconfig"; path = "Target Support Files/Pods-HDCoverageDemo/Pods-HDCoverageDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D91C8134272100CC0085A3E3 /* HDSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDSwift.swift; sourceTree = "<group>"; };
 		D93F49FB27191911009AC246 /* HDCoverageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDCoverageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93F49FE27191911009AC246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93F4A0027191911009AC246 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +68,11 @@
 		D93F4A51271968D1009AC246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D93F4A6D271968FA009AC246 /* HDOCFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDOCFramework.h; sourceTree = "<group>"; };
 		D93F4A6E271968FA009AC246 /* HDOCFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDOCFramework.m; sourceTree = "<group>"; };
+		D9F22E3A272018260020E653 /* HDSwiftFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDSwiftFramework.swift; sourceTree = "<group>"; };
+		D9F22E8C272040E00020E653 /* InstrProfiling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrProfiling.h; sourceTree = "<group>"; };
+		D9F22E8D272041230020E653 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F563A79E25D91FFA8F050C10 /* Pods-HDCoverageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDCoverageDemo.release.xcconfig"; path = "Target Support Files/Pods-HDCoverageDemo/Pods-HDCoverageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F57BFDB13673B2B43F154E20 /* Pods_HDCoverageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDCoverageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D93F4A9127196D9A009AC246 /* HDCoverFramework.framework in Frameworks */,
-				887156E326D8689452FFBBB7 /* Pods_HDCoverageDemo.framework in Frameworks */,
+				E3B774133B5038BDA82C91A7 /* Pods_HDCoverageDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D91C8133272100B00085A3E3 /* Coverage */ = {
+			isa = PBXGroup;
+			children = (
+				D93F4A1C27191C5A009AC246 /* HDOC.h */,
+				D93F4A1D27191C5A009AC246 /* HDOC.m */,
+				D91C8134272100CC0085A3E3 /* HDSwift.swift */,
+			);
+			path = Coverage;
+			sourceTree = "<group>";
+		};
 		D93F49F227191911009AC246 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +128,7 @@
 		D93F49FD27191911009AC246 /* HDCoverageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D91C8133272100B00085A3E3 /* Coverage */,
 				D93F49FE27191911009AC246 /* AppDelegate.swift */,
 				D93F4A0027191911009AC246 /* SceneDelegate.swift */,
 				D93F4A0227191911009AC246 /* ViewController.swift */,
@@ -121,8 +138,8 @@
 				D93F4A0C27191914009AC246 /* Info.plist */,
 				D93F4A1527191B2F009AC246 /* HDCoverage.h */,
 				D93F4A1627191B7A009AC246 /* HDCoverageDemo-Bridging-Header.h */,
-				D93F4A1C27191C5A009AC246 /* HDOC.h */,
-				D93F4A1D27191C5A009AC246 /* HDOC.m */,
+				D9F22E8C272040E00020E653 /* InstrProfiling.h */,
+				D9F22E8D272041230020E653 /* module.modulemap */,
 			);
 			path = HDCoverageDemo;
 			sourceTree = "<group>";
@@ -134,6 +151,7 @@
 				D93F4A51271968D1009AC246 /* Info.plist */,
 				D93F4A6D271968FA009AC246 /* HDOCFramework.h */,
 				D93F4A6E271968FA009AC246 /* HDOCFramework.m */,
+				D9F22E3A272018260020E653 /* HDSwiftFramework.swift */,
 			);
 			path = HDCoverFramework;
 			sourceTree = "<group>";
@@ -141,7 +159,7 @@
 		D93F4A7827196AD8009AC246 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				554201254AB320E1230DC3E8 /* Pods_HDCoverageDemo.framework */,
+				F57BFDB13673B2B43F154E20 /* Pods_HDCoverageDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +198,7 @@
 				D93F49F927191911009AC246 /* Resources */,
 				D93F4A9527196D9B009AC246 /* Embed Frameworks */,
 				D40F809850819EFAAB05BE9D /* [CP] Embed Pods Frameworks */,
+				D91C8139272103CB0085A3E3 /* Coverage */,
 			);
 			buildRules = (
 			);
@@ -224,6 +243,7 @@
 					};
 					D93F4A4D271968D1009AC246 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -306,6 +326,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HDCoverageDemo/Pods-HDCoverageDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D91C8139272103CB0085A3E3 /* Coverage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Coverage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh ${PODS_ROOT}/HDCoverage/HDCoverage/hdcoverage_env.sh 'HDCoverageDemo'\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -313,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91C8135272100CC0085A3E3 /* HDSwift.swift in Sources */,
 				D93F4A0327191911009AC246 /* ViewController.swift in Sources */,
 				D93F49FF27191911009AC246 /* AppDelegate.swift in Sources */,
 				D93F4A0127191911009AC246 /* SceneDelegate.swift in Sources */,
@@ -324,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F22E3B272018260020E653 /* HDSwiftFramework.swift in Sources */,
 				D93F4A70271968FA009AC246 /* HDOCFramework.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,10 +449,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -464,9 +505,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -478,23 +520,94 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC148B5C271C959042F71A45 /* Pods-HDCoverageDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TKRM4J3XJV;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/HDBaseProject/HDBaseProject.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PINCache/PINCache.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/HDBaseProject\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PINCache\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"HDBaseProject\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"PINCache\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JingxiDev_13;
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OBJC_BRIDGING_HEADER = "HDCoverageDemo/HDCoverageDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -502,28 +615,93 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F563A79E25D91FFA8F050C10 /* Pods-HDCoverageDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TKRM4J3XJV;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjack.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/HDBaseProject/HDBaseProject.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PINCache/PINCache.framework/Headers\"",
+					"-isystem",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/HDBaseProject\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PINCache\"",
+					"-iframework",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"HDBaseProject\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"PINCache\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverageDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JingxiDev_13;
 				SWIFT_OBJC_BRIDGING_HEADER = "HDCoverageDemo/HDCoverageDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
 		D93F4A66271968D1009AC246 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -540,18 +718,29 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = (
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
 		D93F4A67271968D1009AC246 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -568,9 +757,12 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

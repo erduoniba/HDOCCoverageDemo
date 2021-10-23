@@ -13,38 +13,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        dosomething()
     }
 
-
-    private func dosomething() {
-        let random = arc4random() % 100
-        if random % 2 == 0 {
-            debugPrint("0")
-            zero()
-        }
-        else {
-            debugPrint("1")
-            one()
-        }
-        
-        HDOC.changeViewColor(view)
-        
-        HDOCFramework.changeViewColor(view)
-        
-        debugPrint("PINCache.shared().diskByteCount: \(PINCache.shared().diskByteCount)")
+    
+    @IBAction func projectOCAction(_ sender: UIButton) {
+        HDOC.projectOCAction(sender.tag)
     }
     
-    private func zero() {
-        self.view.backgroundColor = .orange
+    @IBAction func projectSwiftAction(_ sender: UIButton) {
+        HDSwift.projectSwiftAction(sender.tag)
     }
     
-    private func one() {
-        self.view.backgroundColor = .darkGray
+    @IBAction func frameworkOCAction(_ sender: UIButton) {
+        HDOCFramework.frameworkOCAction(sender.tag)
+    }
+ 
+    @IBAction func frameworkSwiftAction(_ sender: UIButton) {
+        HDSwiftFramework.frameworkSwiftAction(sender.tag)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dosomething()
+    @IBAction func podsOCAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func podSwiftAction(_ sender: UIButton) {
+        
     }
 }
-

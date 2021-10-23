@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HDOCFramework : NSObject
 
-+ (void)changeViewColor:(UIView *)view;
++ (void)frameworkOCAction:(NSInteger)tag;
 
 @end
 

@@ -21,6 +21,7 @@
 		D93F4A9127196D9A009AC246 /* HDCoverFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */; };
 		D93F4A9227196D9A009AC246 /* HDCoverFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D93F4A4E271968D1009AC246 /* HDCoverFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9F22E3B272018260020E653 /* HDSwiftFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F22E3A272018260020E653 /* HDSwiftFramework.swift */; };
+		D9F3E0282729223700C419B3 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F3E0272729223700C419B3 /* Tools.swift */; };
 		E3B774133B5038BDA82C91A7 /* Pods_HDCoverageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57BFDB13673B2B43F154E20 /* Pods_HDCoverageDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		D9F22E3A272018260020E653 /* HDSwiftFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDSwiftFramework.swift; sourceTree = "<group>"; };
 		D9F22E8C272040E00020E653 /* InstrProfiling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrProfiling.h; sourceTree = "<group>"; };
 		D9F22E8D272041230020E653 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		D9F3E0272729223700C419B3 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		F563A79E25D91FFA8F050C10 /* Pods-HDCoverageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDCoverageDemo.release.xcconfig"; path = "Target Support Files/Pods-HDCoverageDemo/Pods-HDCoverageDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F57BFDB13673B2B43F154E20 /* Pods_HDCoverageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDCoverageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		D93F49FD27191911009AC246 /* HDCoverageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D9F3E0262729222800C419B3 /* Tools */,
 				D91C8133272100B00085A3E3 /* Coverage */,
 				D93F49FE27191911009AC246 /* AppDelegate.swift */,
 				D93F4A0027191911009AC246 /* SceneDelegate.swift */,
@@ -162,6 +165,14 @@
 				F57BFDB13673B2B43F154E20 /* Pods_HDCoverageDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9F3E0262729222800C419B3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D9F3E0272729223700C419B3 /* Tools.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		EC2E7B7A0DF50A8F930993BC /* Pods */ = {
@@ -342,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sh ${PODS_ROOT}/HDCoverage/HDCoverage/hdcoverage_env.sh 'HDCoverageDemo'\n";
+			shellScript = "\"${PODS_ROOT}/HDCoverage/HDCoverage/hd_coverage_env.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -354,6 +365,7 @@
 				D91C8135272100CC0085A3E3 /* HDSwift.swift in Sources */,
 				D93F4A0327191911009AC246 /* ViewController.swift in Sources */,
 				D93F49FF27191911009AC246 /* AppDelegate.swift in Sources */,
+				D9F3E0282729223700C419B3 /* Tools.swift in Sources */,
 				D93F4A0127191911009AC246 /* SceneDelegate.swift in Sources */,
 				D93F4A1E27191C5A009AC246 /* HDOC.m in Sources */,
 			);
@@ -531,6 +543,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +610,8 @@
 					"\"SystemConfiguration\"",
 					"-weak_framework",
 					"\"UIKit\"",
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
 				);
 				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverageDemo;
@@ -626,6 +641,7 @@
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverageDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -686,6 +702,8 @@
 					"\"SystemConfiguration\"",
 					"-weak_framework",
 					"\"UIKit\"",
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
 				);
 				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverageDemo;
@@ -712,6 +730,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,7 +742,10 @@
 					"-fcoverage-mapping",
 				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
+				);
 				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -751,13 +773,17 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = HDCoverFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-fprofile-instr-generate",
+					"-fcoverage-mapping",
+				);
 				OTHER_SWIFT_FLAGS = "-profile-generate -profile-coverage-mapping";
 				PRODUCT_BUNDLE_IDENTIFIER = com.harry.toolbardemo.HDCoverFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

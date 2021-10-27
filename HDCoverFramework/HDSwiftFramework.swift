@@ -34,6 +34,8 @@ public struct HDSwiftFramework {
             print("frameworkSwiftAction: 3")
         }
         
+        // 如果是动态库，需要自己处理插桩的代码，并且找到动态库的可执行文件进行计算
+        // 如果是静态库，则不需要下面的代码，直接使用主工程的即可
         saveProfile()
     }
 }

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		TH1zkKN0PJCDwyewDI5kFHQVdcc=
+		MIChoLjGGvhi4J3A8GkJuD90tcw=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		bFGSEcCA0RXZvp+/ukw49Z2tE0I=
+		74nbSP+XQ7K2XURZNsviqis2oIE=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		9bBO17FpS7KDwJtLB4NbwpBjMfw=
+		bv4RC3XjPm4Ywn15F5YNYAKTd2c=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		UVRSmbVzJyVwaCEF1ttzL9WNcec=
+		moczyqJj7A9Pf066ROH2kfX9LQk=
 		</data>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<data>
-		uJFq/YqazcOFRwMKRRPimgowmCU=
+		yX2tw0CVS+Pb2cFnYY0iRM7QSuA=
 		</data>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/CocoaLumberjack</key>
 		<data>
-		B0k4tKZ3vnWS3+xyusEQwfurPdQ=
+		IFS+UEEepSE+TA22sgWVR/9JF4s=
 		</data>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
 		<data>
@@ -199,7 +199,7 @@
 		</dict>
 		<key>Frameworks/HDBaseProject.framework/HDBaseProject</key>
 		<data>
-		rdVrQWI2pDRavHjG63dUGvxO28c=
+		jGPVQJ1ulVx3z6KSz8bKADsqd9I=
 		</data>
 		<key>Frameworks/HDBaseProject.framework/HDBaseProject.bundle/request_fail@2x.png</key>
 		<data>
@@ -235,27 +235,43 @@
 		</data>
 		<key>Frameworks/HDCoverFramework.framework/HDCoverFramework</key>
 		<data>
-		CbTfjkMLxn5wciKCS1HNLR5s7Ws=
+		AxVftTiF8SfLckeguGHFPNQuslM=
 		</data>
 		<key>Frameworks/HDCoverFramework.framework/Info.plist</key>
 		<data>
 		g1mtZDVKUSWK1TXG6+oOGXBcoJc=
 		</data>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeDirectory</key>
+		<data>
+		tIqjblDq24ZmACqm1SOT8TZa7Yk=
+		</data>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		3zKd6SWAK1KNqnew1+3wwJNtQEU=
+		</data>
 		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeResources</key>
 		<data>
 		YoLVOrQtMRUEjVufTLnRRfcvEHA=
 		</data>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+		</data>
 		<key>Frameworks/HDCoverage.framework/HDCoverage</key>
 		<data>
-		QVa8EvwqoRFFirxeRGbiqKo8ssk=
+		KzDBPfuK/vecs/v/gy9sQZnxxQU=
 		</data>
 		<key>Frameworks/HDCoverage.framework/Info.plist</key>
 		<data>
-		wVe7qCpilcfFD2P1cj9EeoLxpR0=
+		SFNUXxWz14Eo5Km3eh6Ltsr5ygA=
 		</data>
 		<key>Frameworks/HDCoverage.framework/_CodeSignature/CodeResources</key>
 		<data>
-		0s8NwX9i9vA48LbiHuIaLSxkGzw=
+		WYWPOu+k/9r6Sa/SUeUJB/tixiM=
 		</data>
 		<key>Frameworks/MJRefresh.framework/Info.plist</key>
 		<data>
@@ -263,7 +279,7 @@
 		</data>
 		<key>Frameworks/MJRefresh.framework/MJRefresh</key>
 		<data>
-		v1L0Q5FTH4UdB/dAvt3a31TuvoE=
+		UW9UMJaRsI3ztg8DC1bkBr7x2Kc=
 		</data>
 		<key>Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png</key>
 		<data>
@@ -315,7 +331,7 @@
 		</data>
 		<key>Frameworks/PINCache.framework/PINCache</key>
 		<data>
-		ErT1ifYN8tOeg8vqLt75VpUe+g8=
+		fqavarAzecXCuh31WTKjCaJbOo4=
 		</data>
 		<key>Frameworks/PINCache.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -327,7 +343,7 @@
 		</data>
 		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
 		<data>
-		3fk09pi/hhBYQCzhJ5ylq9P1eg8=
+		msCJE8DhlPwFiEM/JqZmuNkKt84=
 		</data>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -348,7 +364,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8nO5PcPgDM2ipks3dNfjw0HhHjuGlHDLtINig9JEFok=
+			zvMVBAIalg6VqSV7N0Bw9JlMc4SpmdCqwatrRZJOGss=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -362,14 +378,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jv9h3oacKoY5F9iAdbqOjV1FUOiYB5q96fyKXGw77RE=
+			OOOpQ0tTS/ECnKKEmW+Iw2Dp5gIqizhHEfK8JbWPyvE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dZR7ZOK5KPNydT4QTc8d+xfy08ZopUawjk7Qq4IuAH4=
+			HDrrx3Y7TGDjh+KcUbfTileKsa2j0fJHA6Jtz5R+ZAE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -383,14 +399,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kJ2+g+ogg9+5gL3wrsl2SxQ6BdMTOZZMiICJvWFHd70=
+			EH1Oh36ZwxUscNmDoXq6ogmPhkwQR2uVXdfLu5ZSF8U=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/AFNetworking</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w1HJWzDD7/QhdJG9oEqFjJs8svd83SX3gGoi1OJ1N7s=
+			p5ZdvvUAyQBSpcBZiTSB9H1M53J794Wf6EFlVRxoyHE=
 			</data>
 		</dict>
 		<key>Frameworks/AFNetworking.framework/Info.plist</key>
@@ -411,7 +427,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KiDE3ehqj5wDCkwDsbjopNsx+8Rx8bBzPzDC31OtRyQ=
+			XOtXE9gpemIPQTbHAlsJ95sSEkvgXIYWrQivvZt9Vb0=
 			</data>
 		</dict>
 		<key>Frameworks/CocoaLumberjack.framework/Info.plist</key>
@@ -652,7 +668,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q8ZlyHcpq+ue7LpOYmjbpYMwYSazQDRTOqFXdEA7MK0=
+			gW85Se0EWZWnxhkTtmdX+D69j0dSeNIOd7SKFxKrf+E=
 			</data>
 		</dict>
 		<key>Frameworks/HDBaseProject.framework/HDBaseProject.bundle/request_fail@2x.png</key>
@@ -715,7 +731,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tTeMUQw/biGuF3okrP1tLG9aL3mZeLPdKsFixgs+rds=
+			jfHJi2aqa6XxrX6+HOfxlY4gGEGIWyptwNEqhgGzkfc=
 			</data>
 		</dict>
 		<key>Frameworks/HDCoverFramework.framework/Info.plist</key>
@@ -725,6 +741,27 @@
 			Sf9wWyL0Tpdeux4pLo9xe232iTaVj2fZlWsuLALg+po=
 			</data>
 		</dict>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeDirectory</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LAVW5PAfES1mahOkwt1XJ4EUYQYU+xrVg1CzduYw568=
+			</data>
+		</dict>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dqyc0S2p2TizSwNbpFnPq3Hy3rBIXeMID9LywKDLtAw=
+			</data>
+		</dict>
 		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
@@ -732,25 +769,32 @@
 			BVwrzwfI5PDXJBLHxLpQgkychFQQznx+ZrW9OsVMA0Y=
 			</data>
 		</dict>
+		<key>Frameworks/HDCoverFramework.framework/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+			</data>
+		</dict>
 		<key>Frameworks/HDCoverage.framework/HDCoverage</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KgPp5JI/taaJZabcOr8uSCYEE1GjDtzlvDdKO6gNoNc=
+			4/T8Ui/3kXLA12PdhHNUNRGltx+q8UVPf470c6V2rLM=
 			</data>
 		</dict>
 		<key>Frameworks/HDCoverage.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r1U0LC7kOIR1q8RuQ2cfzBcyKvFWTnauMPJr8ou7X7w=
+			FEdQELUqvb3276fO/jIMGv5bS8bZhjKR1ThAO1XNEC4=
 			</data>
 		</dict>
 		<key>Frameworks/HDCoverage.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lXLS/KUcE7K8x58M/wOQD1WNdLbdNlze4pNrzl0DaLE=
+			vGikSDD2QTYJvhUb8FShnZ66Rck/AvzRvXWsRhIDkVU=
 			</data>
 		</dict>
 		<key>Frameworks/MJRefresh.framework/Info.plist</key>
@@ -764,7 +808,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wbXOOO1fRIJ4rjXOYwsh+62LHqdTFP6RouVuiB2xSqI=
+			kPNoi6WZvd7+3XILfWvkiWRfk6v30LZm3LWFQ1AYjtc=
 			</data>
 		</dict>
 		<key>Frameworks/MJRefresh.framework/MJRefresh.bundle/arrow@2x.png</key>
@@ -828,7 +872,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0uImd7LZFSiTaP07oAf9gn1cuSAbuLYera+G5gjaYpw=
+			zAvWjxzMtcOhjCgeAdtYdCqhPwOsu81By3YMKWrP/7Q=
 			</data>
 		</dict>
 		<key>Frameworks/PINCache.framework/_CodeSignature/CodeResources</key>
@@ -849,7 +893,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5kN2WZFjcM5nngEvD50Afi53Y2UDv/mY77jBeDbe4do=
+			1JxlQEcUwJ5iBxTNQBhcvaj8lLWjuznW6HRWnp9bJ/Q=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>

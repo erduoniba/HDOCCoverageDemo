@@ -1,0 +1,82 @@
+Counters:
+  $s14HDCoverageDemo11AppDelegateC11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0k6LaunchJ3KeyaypGSgtF:
+    Hash: 0x0000000000000000
+    Counters: 2
+    Function count: 2
+  $s14HDCoverageDemo13SceneDelegateC20sceneDidBecomeActiveyySo7UISceneCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo13SceneDelegateC21sceneWillResignActiveyySo7UISceneCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo13SceneDelegateC23sceneDidEnterBackgroundyySo7UISceneCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo13SceneDelegateC24sceneWillEnterForegroundyySo7UISceneCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo13SceneDelegateC5scene_13willConnectTo7optionsySo7UISceneC_So0J7SessionCSo0J17ConnectionOptionsCtF:
+    Hash: 0x0000000000000000
+    Counters: 2
+    Function count: 2
+  $s14HDCoverageDemo13SceneDelegateC6windowSo8UIWindowCSgvg:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 9
+  $s14HDCoverageDemo14ViewControllerC11viewDidLoadyyF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo14ViewControllerC15projectOCActionyySo8UIButtonCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo14ViewControllerC17frameworkOCActionyySo8UIButtonCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo14ViewControllerC18projectSwiftActionyySo8UIButtonCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo14ViewControllerC20frameworkSwiftActionyySo8UIButtonCF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  $s14HDCoverageDemo5ToolsC13saveAndUploadyyF:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 3
+  $s14HDCoverageDemo5ToolsC16registerCoverage10moduleNameySS_tF:
+    Hash: 0x0000000000000000
+    Counters: 2
+    Function count: 2
+  $s14HDCoverageDemo7HDSwiftV18projectSwiftActionyySiFZ:
+    Hash: 0x0000000000000000
+    Counters: 4
+    Function count: 1
+  $s16HDCoverFramework07HDSwiftB0V20frameworkSwiftActionyySiFZ:
+    Hash: 0x0000000000000000
+    Counters: 4
+    Function count: 1
+  /Users/denglibing/HDProject/HarryProject/iOS/HDCoverageDemo/HDCoverageDemo/SceneDelegate.swift:$s14HDCoverageDemo13SceneDelegateC23sceneDidEnterBackgroundyySo7UISceneCFyycfU_:
+    Hash: 0x0000000000000000
+    Counters: 1
+    Function count: 1
+  HDOC.m:+[HDOC projectOCAction:]:
+    Hash: 0xf1a0da2b9d47a698
+    Counters: 4
+    Function count: 1
+  HDOCFramework.m:+[HDOCFramework frameworkOCAction:]:
+    Hash: 0xf1a0da2b9d47a698
+    Counters: 4
+    Function count: 1
+Instrumentation level: Front-end
+Functions shown: 19
+Total functions: 19
+Maximum function count: 9
+Maximum internal block count: 2

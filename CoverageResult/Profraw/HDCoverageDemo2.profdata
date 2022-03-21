@@ -1,0 +1,167 @@
+$s14HDCoverageDemo11AppDelegateC11application_29didFinishLaunchingWithOptionsSbSo13UIApplicationC_SDySo0k6LaunchJ3KeyaypGSgtF
+# Func Hash:
+0
+# Num Counters:
+2
+# Counter Values:
+2
+2
+
+$s14HDCoverageDemo13SceneDelegateC20sceneDidBecomeActiveyySo7UISceneCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo13SceneDelegateC21sceneWillResignActiveyySo7UISceneCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo13SceneDelegateC23sceneDidEnterBackgroundyySo7UISceneCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo13SceneDelegateC24sceneWillEnterForegroundyySo7UISceneCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo13SceneDelegateC5scene_13willConnectTo7optionsySo7UISceneC_So0J7SessionCSo0J17ConnectionOptionsCtF
+# Func Hash:
+0
+# Num Counters:
+2
+# Counter Values:
+2
+0
+
+$s14HDCoverageDemo13SceneDelegateC6windowSo8UIWindowCSgvg
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+9
+
+$s14HDCoverageDemo14ViewControllerC11viewDidLoadyyF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo14ViewControllerC15projectOCActionyySo8UIButtonCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo14ViewControllerC17frameworkOCActionyySo8UIButtonCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo14ViewControllerC18projectSwiftActionyySo8UIButtonCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo14ViewControllerC20frameworkSwiftActionyySo8UIButtonCF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+$s14HDCoverageDemo5ToolsC13saveAndUploadyyF
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+3
+
+$s14HDCoverageDemo5ToolsC16registerCoverage10moduleNameySS_tF
+# Func Hash:
+0
+# Num Counters:
+2
+# Counter Values:
+2
+0
+
+$s14HDCoverageDemo7HDSwiftV18projectSwiftActionyySiFZ
+# Func Hash:
+0
+# Num Counters:
+4
+# Counter Values:
+1
+1
+0
+0
+
+$s16HDCoverFramework07HDSwiftB0V20frameworkSwiftActionyySiFZ
+# Func Hash:
+0
+# Num Counters:
+4
+# Counter Values:
+1
+1
+0
+0
+
+/Users/denglibing/HDProject/HarryProject/iOS/HDCoverageDemo/HDCoverageDemo/SceneDelegate.swift:$s14HDCoverageDemo13SceneDelegateC23sceneDidEnterBackgroundyySo7UISceneCFyycfU_
+# Func Hash:
+0
+# Num Counters:
+1
+# Counter Values:
+1
+
+HDOC.m:+[HDOC projectOCAction:]
+# Func Hash:
+17411156040271505048
+# Num Counters:
+4
+# Counter Values:
+1
+1
+0
+0
+
+HDOCFramework.m:+[HDOCFramework frameworkOCAction:]
+# Func Hash:
+17411156040271505048
+# Num Counters:
+4
+# Counter Values:
+1
+1
+0
+0
+
